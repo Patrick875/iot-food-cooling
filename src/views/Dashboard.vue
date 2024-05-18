@@ -1,5 +1,6 @@
 <template>
-  <div class="bg-[rgb(255,255,255,0.94)] font-Nunito min-h-[100vh] min-w-[100vw] flex flex-col items-center justify-center">
+  <transition name="dashboard">
+      <div class="bg-[rgb(255,255,255,0.94)] font-Nunito min-h-[100vh] min-w-[100vw] flex flex-col items-center justify-center">
     <p class="font-bold text-warning">IOT FOOD WARMING SYSTEM</p>
  
     <svg 
@@ -36,6 +37,8 @@
       <button @click="logout()" class="w-full rounded-[4px] px-4 p-2 text-white bg-black">Logout</button>
     </div>
   </div>
+  </transition>
+  
 </template>
 <script setup lang="ts">
 import { ref, onBeforeUnmount, onMounted } from 'vue';
@@ -90,5 +93,17 @@ onBeforeUnmount(() => {
 
 
 <style>
-
+.dashboard-enter-from{
+  opacity:0;
+  z-index:-1;
+  transform:scale(0.5)
+}
+.dashboard-enter-to{
+  opacity:1;
+  z-index:1;
+  transform:scale(1)
+}
+.dashboard-enter-active{
+  transition: all 1.6s ease-in;
+}
 </style>
