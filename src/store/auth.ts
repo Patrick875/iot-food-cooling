@@ -30,7 +30,7 @@ export const useAuthStore = defineStore({
         async login({ email, password }: { email: string; password: string }) {
 
             try {
-                const res = await axios.post('http://localhost:8080/api/auth/login', { email, password });
+                const res = await axios.post('http://0.0.0.0:8080/api/auth/login', { email, password });
 
                 // Store user data in local storage
                 localStorage.setItem('user', JSON.stringify(res.data));

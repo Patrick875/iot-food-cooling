@@ -56,7 +56,7 @@ const authStore = useAuthStore();
 const router = useRouter();
 
 const temp = ref<Temp|undefined>();
-const socket = io('http://localhost:8080');
+const socket = io('http://0.0.0.0:8080');
 const checked= ref<boolean>(false)
 const lastTemp=ref<number>(0);
 
