@@ -70,7 +70,7 @@ const logout= ()=>{
 socket.on('new-temperature', (data) => {
  
     temp.value=data;
-    lastTemp.value = temp ? temp.value.value :0;
+    lastTemp.value = temp && temp.value !=undefined ? temp.value.value :0;
     // console.log('last-temp', lastTemp);
     if (lastTemp.value > 20 && lastTemp.value <= 40) {
       checked.value = true;
