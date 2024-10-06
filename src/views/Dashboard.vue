@@ -1,7 +1,7 @@
 <template>
   <transition name="dashboard">
       <div class="bg-[rgb(255,255,255,0.94)] font-Nunito min-h-[100vh] min-w-[100vw] flex flex-col items-center justify-center">
-    <p class="font-bold text-warning">IOT FOOD WARMING SYSTEM</p>
+    <p class="font-bold text-warning">SMART BUFFET BASED ON IOT</p>
  
     <svg 
     xmlns="http://www.w3.org/2000/svg"
